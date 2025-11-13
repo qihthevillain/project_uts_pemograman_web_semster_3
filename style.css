@@ -1,0 +1,169 @@
+/* ===== Style Global Website Kamu ===== */
+body {
+    font-family: "Poppins", sans-serif;
+
+    /* Background sesuai gambar cyberpunk, sesuaikan path gambarnya */
+    background: url('Acer_Wallpaper_05_3840x2400.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    margin: 0;
+    padding: 0;
+    color: #7ba9d9; /* Warna teks biru lembut dan tidak terlalu terang */
+    position: relative;
+}
+
+/* Overlay gelap agar teks dan container lebih jelas */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 30, 0.75); /* Overlay biru gelap transparan */
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ===== Styling container utama ===== */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background: rgba(10, 15, 30, 0.85); /* Background container lebih gelap & solid */
+    padding: 25px;
+    border-radius: 12px;
+
+    /* Shadow lebih lembut warna biru */
+    box-shadow: 0 0 15px rgba(30, 85, 150, 0.4); 
+}
+
+/* ===== Judul halaman ===== */
+h2 {
+    text-align: center;
+    color: #6083b6; /* Warna judul lebih redup */
+    margin-bottom: 20px;
+
+    /* Neon glow lembut dan tidak terlalu terang */
+    text-shadow:
+        0 0 4px #6083b6,
+        0 0 8px #40618c;
+}
+
+/* ===== Tabel keren ===== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    font-family: inherit;
+}
+
+thead tr {
+    background: linear-gradient(90deg, #274e94, #173463); /* Gradasi biru tua lebih redup */
+    color: #acc6eb; /* Warna teks putih kebiruan lembut */
+    text-align: center;
+    box-shadow: 0 0 8px #274e94;
+}
+
+thead th {
+    padding: 12px 10px;
+    font-size: 15px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+tbody tr {
+    background: rgba(20, 30, 50, 0.8);
+    text-align: center;
+    box-shadow: 0 0 5px rgba(60, 80, 140, 0.2);
+    transition: all 0.2s ease;
+}
+
+tbody tr:hover {
+    background: rgba(60, 80, 140, 0.25);
+    transform: scale(1.01);
+    box-shadow: 0 0 12px #40618c;
+}
+
+tbody td {
+    padding: 10px;
+    border-radius: 6px;
+    color: #95a9ce; /* Warna teks biru pucat dan matte */
+}
+
+/* Link dengan warna biru neon yang lebih lembut */
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #5a87bc;
+    transition: color 0.3s ease;
+}
+
+a[href*="edit_user"]:hover {
+    color: #86a7e3;
+}
+
+a[href*="delete_user"] {
+    color: #be5a5a; /* Merah untuk tombol hapus tapi lebih redup */
+}
+
+a[href*="delete_user"]:hover {
+    color: #d17a7a;
+}
+
+/* Tombol gaya biru neon yang lembut */
+button, input[type=submit] {
+    background: rgba(54, 105, 255, 0.5);
+    border: none;
+    padding: 10px 20px;
+    color: #d5e4ff;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow:
+        0 0 5px #3a64c6,
+        0 0 10px #274d91;
+}
+
+button:hover, input[type=submit]:hover {
+    opacity: 1;
+    background: #3a64c6;
+    transform: scale(1.05);
+    box-shadow:
+        0 0 10px #3a64c6,
+        0 0 20px #274d91;
+}
+
+/* Form Login/Register */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    padding: 10px;
+    border: 1px solid #274d91;
+    border-radius: 6px;
+    outline: none;
+    background: rgba(10, 15, 30, 0.7);
+    color: #a8badc;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    border-color: #5a87bc;
+    box-shadow:
+        0 0 7px #5a87bc;
+}
+/* ===== Garis Pemisah (hr) ===== */
+hr {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 50%;
+    height: 3px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #1e3a8a, #3a64c6); /* gradasi biru */
+    box-shadow: 0 0 10px rgba(58, 100, 198, 0.6); /* efek glow lembut */
+}
